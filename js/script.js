@@ -31,13 +31,15 @@ function searchCountries() {
 // };
 
 function showCountriesList(resp) {
-	countriesList.innerHTML = '';		
+	countriesList.innerHTML = '';
+	var capitalName = 'https://restcountries.eu/rest/v2/all?fields=capital'	
 	resp.forEach(function(item){
 		var thEL = document.createElement('th');
 		thEL.innerText = item.name;
 		countriesList.appendChild(thEL);
 		var data = new FormData();
 		data.append('name', capitalName);
+		//data.append('https://restcountries.eu/rest/v2/all?fields=name;capital;currencies');
 		var tbody = document.createElement('tr');
 			fetch(url + capitalName, {
 				method: 'POST',
