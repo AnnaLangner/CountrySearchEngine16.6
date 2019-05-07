@@ -21,34 +21,11 @@ function searchCountries() {
         .then(showCountriesList);
 };
 
-// function showCountriesList(resp) {
-// 	countriesList.innerHTML = '';
-// 	resp.forEach(function(item){
-//     	var liEl = document.createElement('li');
-//     	liEl.innerText = item.name;    	
-//     	countriesList.appendChild(liEl);
-// 	});
-// };
-
 function showCountriesList(resp) {
 	countriesList.innerHTML = '';
-	var capitalName = 'https://restcountries.eu/rest/v2/all?fields=capital'	
 	resp.forEach(function(item){
-		var thEL = document.createElement('th');
-		thEL.innerText = item.name;
-		countriesList.appendChild(thEL);
-		var data = new FormData();
-		data.append('name', capitalName);
-		//data.append('https://restcountries.eu/rest/v2/all?fields=name;capital;currencies');
-		var tbody = document.createElement('tr');
-			fetch(url + capitalName, {
-				method: 'POST',
-    			body: data,
-			})
-        	.then(function(resp) {
-        	    return resp.json();
-        	})
-        	.then(showCountriesList);  			
+    	var liEl = document.createElement('li');
+		liEl.innerHTML = '<tr><td><b>' + item.name + '</b><br></td>' + '<td> capital </td>' + '<td> :  &nbsp' + item.capital + '</td><br><br></tr>';
+    	countriesList.appendChild(liEl);
 	});
 };
-
