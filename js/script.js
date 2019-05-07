@@ -21,11 +21,32 @@ function searchCountries() {
         .then(showCountriesList);
 };
 
+// function showCountriesList(resp) {
+// 	countriesList.innerHTML = '';
+// 	resp.forEach(function(item){
+//     	var liEl = document.createElement('li');
+//     	liEl.innerText = item.name;    	
+//     	countriesList.appendChild(liEl);
+// 	});
+// };
+
 function showCountriesList(resp) {
-	countriesList.innerHTML = '';
+	countriesList.innerHTML = '';		
 	resp.forEach(function(item){
-    	var liEl = document.createElement('li');
-    	liEl.innerText = item.name;    	
-    	countriesList.appendChild(liEl);
+		var thEL = document.createElement('th');
+		thEL.innerText = item.name;
+		countriesList.appendChild(thEL);
+		var data = new FormData();
+		data.append('name', capitalName);
+		var tbody = document.createElement('tr');
+			fetch(url + capitalName, {
+				method: 'POST',
+    			body: data,
+			})
+        	.then(function(resp) {
+        	    return resp.json();
+        	})
+        	.then(showCountriesList);  			
 	});
 };
+
