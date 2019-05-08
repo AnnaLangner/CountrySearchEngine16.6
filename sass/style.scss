@@ -1,0 +1,34 @@
+body {
+	padding: 10px;
+	text-align: center;
+	background-color: #CCFFFF;
+	color: #003399;
+
+	.titleMachine {
+
+
+	}
+	.btn-search {
+		width: 200px;
+		height: 50px;
+		background-color: #99FFFF;
+		color: #003399;
+		border: 1px solid #99FFFF
+		border-radius: 4px;
+
+	}
+	.titleTable {
+
+	}
+	.tableCountries {
+		text-align: center;
+
+		th {
+			border: 1px solid #003399
+		}
+		td {
+			border: 1px solid #003399
+		}
+
+	}
+}

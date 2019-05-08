@@ -24,8 +24,11 @@ function searchCountries() {
 function showCountriesList(resp) {
 	countriesList.innerHTML = '';
 	resp.forEach(function(item){
-    	var liEl = document.createElement('li');
-		liEl.innerHTML = '<tr><td><b>' + item.name + '</b><br></td>' + '<td> capital </td>' + '<td> :  &nbsp' + item.capital + '</td><br><br></tr>';
-    	countriesList.appendChild(liEl);
+        var thead = document.createElement('th');
+        thead.innerHTML = '<tr><th>' + item.name + '<th><tr>'
+    	var tbody = document.createElement('td');
+		tbody.innerHTML = '<tr><td> capital </td>' + '<td> :  &nbsp' + item.capital + '</td></tr>';
+    	countriesList.appendChild(thead);
+        countriesList.appendChild(tbody);
 	});
 };
