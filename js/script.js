@@ -25,7 +25,7 @@ function showCountriesList(resp) {
 	countriesList.innerHTML = '';
 	resp.forEach(function(item){
         var thead = document.createElement('th');
-        thead.innerHTML = '<tr><th>' + item.name + '<th><tr>'
+        thead.innerHTML = '<tr><th>' + '<img width="80" height="50" src="' + item.flag + '">' + item.name + '<th><tr>'
     	var tbody = document.createElement('td');
 		tbody.innerHTML = '<tr><td> capital </td>' + '<td> :  &nbsp' + item.capital + '</td></tr>';
     	countriesList.appendChild(thead);
