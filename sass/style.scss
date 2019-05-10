@@ -27,23 +27,22 @@ body {
 		color: #003399;
 		border: 1px solid #003399;
 		border-radius: 4px;
+		text-align: center;
 	}
 	.titleTable {
 
 	}
 	.tableCountries {
-		text-align: center;
+		text-align: left;
 
 		th {
-			border: 1px solid #003399;
-			text-align: center;
+			border: 1px solid #003399;			
 			border-radius: 4px;
 			font-weight: 25px;
 
 		}
 		td {
 			border: 1px solid #003399;
-			text-align: center;
 			border-radius: 4px;
 
 		}
