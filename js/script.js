@@ -25,7 +25,7 @@ function showCountriesList(resp) {
 	countriesList.innerHTML = '';
 	resp.forEach(function(item){       
     	var tbody = document.createElement('tr');
-		tbody.innerHTML = '<tr><th>' + '<img width="80" height="50" src="' + item.flag + '">' + item.name + '</th>' + '<td> capital </td>' + '<td> :  &nbsp' + item.capital + '</td></tr>';
+		tbody.innerHTML = '<tr><td>' + '<img width="80" height="50" src="' + item.flag + '">' + item.name + '</td>' + '<td> capital </td>' + '<td> :  &nbsp' + item.capital + '</td></tr>';
     	countriesList.appendChild(tbody);
 	});
 };
