@@ -4,7 +4,7 @@ body .btn-search { margin: 0; padding: 2px 0; width: 200px; height: 30px; backgr
 
 body input { margin: 0; padding: 0; width: 200px; height: 30px; background-color: #99FFFF; color: #003399; border: 1px solid #003399; border-radius: 4px; text-align: center; }
 
-body .tableCountries { text-align: left; }
+body .tableCountries { text-align: left; width: 600px; margin: 0 auto; }
 
 body .tableCountries th { border: 1px solid #003399; border-radius: 4px; font-weight: 25px; }
 
